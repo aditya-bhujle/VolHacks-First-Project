@@ -1,5 +1,7 @@
+
 const express = require('express');
 const app = express();
+//const bcrypt = require('bcrypt');
 
 app.get('/', (req, res) => {
   res.send('Hello from App Engine!');
@@ -13,21 +15,16 @@ const db = new Firestore({
 });
 
 let docRef = db.collection('users').doc('alovelace');
-
 let setAda = docRef.set({
-  first: 'Ada',
-  last: 'Lovelace',
-  born: 1815
+  password: "password"});
+/** encrypt password
+bcrypt.hash('password',10,function(err, hash){
+let setAda = docRef.set({
+  password: hash
+  });
 });
-
-let aTuringRef = db.collection('users').doc('aturing');
-
-let setAlan = aTuringRef.set({
-  'first': 'Alan',
-  'middle': 'Mathison',
-  'last': 'Turing',
-  'born': 1912
-});
+**/
+//decryption
 
 
 // Listen to the App Engine-specified port, or 8080 otherwise
