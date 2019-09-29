@@ -13,13 +13,17 @@
 						<div id="status-text" style="color: #2ECC71">BusyOrNot</div>
 					</div>!
 				</h1>
-				<input class='input' placeholder="First Name">
-				<input class='input' placeholder="Last Name">
-				<input class='input' type="email"  placeholder="Email">
-				<input class='input' type="password" placeholder="Password">
-				<h4 style="margin-top: 10px">Create your account.</h4>
-				<h4>Back to login.</h4>
-			</div>					
-		</div>		
+				
+				<form id="sign-in-form" action="action.php" method="post">
+					<input class='input' placeholder="First Name" name = 'firstname' required>
+					<input class='input' placeholder="Last Name" name = 'lastname' required>
+					<input class='input' type="email"  placeholder="Email" name = 'email' required>
+					<input class='input' type="password" placeholder="Password" name = 'email' required>
+					<input class = 'buttonnocss' type="submit" value="Create your account." style="margin-top: 10px">
+				</form>
+				<h4><a href="login.html">Back to login.</a></h4>
+			</div>
+		</div>
+		<script src="signup.js" type="text/javascript"></script>
 	</body>
 </html>

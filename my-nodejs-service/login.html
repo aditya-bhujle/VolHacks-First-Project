@@ -13,10 +13,13 @@
 						<div id="status-text" style="color: #2ECC71">BusyOrNot</div>
 					</div>.
 				</h1>
-				<input class='input' type="email" placeholder="Email">
-				<input class='input' type="password" placeholder="Password">
-				<h4 style="margin-top: 10px">Don't have an account?</h4>
-				<h4>Forgot your password?</h4>
+				<form id="log-in-form" action="action.php" method="post">
+					<input class='input' type="email" placeholder="Email" name = 'email' required>
+					<input class='input' type="password" placeholder="Password" name = 'password' required>
+					<input style = 'display: none' class = 'buttonnocss' type="submit" value="Log in" style="margin-top: 10px">
+				</form>
+				<h4 style="margin-top: 10px" class='secondary'><a href="signup.html">Don't have an account?</h4>
+				<h4 class="secondary"><a href="passwordreset.html">Forgot your password?</h4>
 			</div>					
 		</div>		
 	</body>

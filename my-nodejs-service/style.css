@@ -281,6 +281,7 @@ input[type="reset"],
 input[type="submit"] {
   -webkit-appearance: button; /* 2 */
   cursor: pointer; /* 3 */
+	font-weight: bold;
 }
 
 /**
@@ -415,6 +416,9 @@ th {
 }
 
 body{
+	max-width: 100%;
+	overflow: hidden;
+	padding: 0px;
 	font-family: Poppins, sans-serif;
 	color: #333;
 	max-height: 100%;
@@ -433,6 +437,26 @@ h3{
 	margin: 10px 0px;
 }
 
+h4{
+	margin: 0px;
+}
+
+.nav{
+	position: absolute;
+	left: auto;
+	top: 0%;
+	right: auto;
+	bottom: auto;
+	width: 100%;
+}
+
+.nav-inside{
+	max-width: 1024px;
+	margin: auto;
+	display: flex;
+	justify-content: space-around;
+}
+
 .busy{color: #E74C3C;}
 
 .not-busy{color: #2ECC71;}
@@ -442,6 +466,14 @@ h3{
 	display: flex;
 	align-items: center;
 	justify-content: flex-end;
+	flex-direction: column;
+}
+
+.split-center{
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 	flex-direction: column;
 }
 
@@ -476,6 +508,15 @@ h3{
 	width: 100%;
 }
 
+a{
+	color: inherit;
+	text-decoration: inherit;
+}
+
+a:hover{
+	background-color: white;
+}
+
 .user-status{
 	margin-left: 20px;
 }
@@ -486,4 +527,26 @@ h3{
 	font-size: 24px;
 	line-height: 32px;
 	border: none 0px black;
+}
+
+.buttonnocss{
+	padding: 0;
+	border: none;
+	outline: none;
+	font: inherit;
+	color: inherit;
+	background: none;
+	line-height: 26px;
+}
+
+form{
+	margin: 0px;
+}
+
+.secondary{
+	color: gray;
+}
+
+.secondary:hover{
+	color: #2ECC71;
 }
